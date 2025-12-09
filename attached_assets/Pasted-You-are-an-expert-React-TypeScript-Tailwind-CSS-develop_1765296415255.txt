@@ -1,0 +1,259 @@
+You are an expert React + TypeScript + Tailwind CSS developer.
+
+Goal:  
+Build a **fully responsive, production-ready academic research group website** for  
+**“SWING @ IIIT Kottayam – Smart Wireless Inter-Networking Research Group”**, based on the detailed spec below.
+
+Tech stack (please set up the project for me):
+
+- React + TypeScript (Vite or Create React App, your choice)
+- React Router for page navigation
+- Tailwind CSS for styling (configured and working)
+- React Icons (for section icons and social icons)
+- Folder for static assets: `/public/images/...`
+
+Overall requirements:
+
+- Clean, modern, **dark theme** UI similar to a professional research-lab site.
+- Color scheme:
+  - Primary: teal/blue gradient (#088f8f, #54b3d6)
+  - Secondary: white + gray tones
+  - Accent: soft pastel colors for cards
+- **Mobile-first, fully responsive**: works well on phones, tablets, and desktops.
+- Smooth scrolling to sections, subtle hover effects and transitions.
+- Components must be reusable and data-driven (map over arrays instead of repeating markup).
+- Put all major text content into separate data files (e.g. `data/research.ts`, `data/events.ts`) to make it easy to update.
+
+ROUTING & PAGES
+Create these routes with React Router:
+
+1. `/` – **Home**
+   - Hero section with:
+     - SWING + IIIT Kottayam logos (use placeholder images from `/public/images/logos/...`)
+     - Project name: “SWING @ IIIT Kottayam”
+     - Tagline: “Smart Wireless Inter-Networking Research Group Website”
+     - CTA buttons: “View Research Areas”, “Contact Us”
+   - Short **Project Overview**:
+     - Type: Academic research group website
+     - Institution: Indian Institute of Information Technology Kottayam (IIIT Kottayam)
+     - Tech stack info (original project: PHP, HTML, CSS, JS, Bootstrap, jQuery, Owl Carousel – mention as legacy note)
+   - Section: **Project Purpose**
+     - Text: explain that this is an academic research group website to showcase work, achievements, events, and activities of SWING.
+   - Section: **Research Focus Areas** – just a teaser with “View Details” button linking to `/research-areas`.
+
+2. `/research-areas` – **Research Focus Areas**
+   Show structured cards/accordions for each area:
+
+   1) Software Defined Networks (SDN)
+      - Controller placement problems
+      - P4 Programming
+      - Session Management
+
+   2) Internet of Things (IoT)
+      - Routing and IoT applications
+      - Home automation
+      - Vehicle monitoring
+      - Agriculture applications
+
+   3) Natural Language Processing (NLP)
+      - Dravidian language translations
+      - Language translator development
+      - Speech-to-text summarization
+
+   4) Compilers
+      - Design and implementation of translators and compilers
+
+   5) Security
+      - Wireless Sensor Network (WSN) Security
+      - IoT Security
+      - SDN Security
+
+3. `/team` – **Team Structure**
+   Use card layout and grouping:
+
+   - Internal Faculty (6 members):
+     - Dr. Koppala Guravaiah (Lead)
+     - Dr. Bhanu Chander
+     - Dr. C Selvi
+     - Dr. Santhos Kumar
+     - Dr. Dhanyamol M V
+     - Dr. Jalaja M J
+
+   - External Academicians (4 members): 
+     - Dr. Leela Velsamy (NIT Trichy)
+     - Dr. Venkanu U (NIT Warangal)
+     - Dr. Preeth R (IIITDM Kancheepuram)
+     - Dr. Naveen Kumar R (SRM AP)
+
+   - Industry Experts (2 members):
+     - Dr. Shashidhara R (Blockchain Lead, Wipro Technologies)
+     - Dr. Sri Harsha K (AI/CV Engineer, MATDUN Labs)
+
+   - Stats section (simple highlight cards):
+     - Ph.D. Scholars: 4 students
+     - B.Tech Students: 15+ students
+     - Intern Students: 2 students
+     - Alumni: Multiple batches
+
+4. `/projects` – **Funded & Consultancy Projects**
+   - Section: **Sponsored Projects**
+     - SERB Sponsored Workshop on “SDN: Software Defined Networks Architectures and Applications” (July 2023) – ₹5 lakhs
+
+   - Section: **Consultancy Projects** (as list of cards with title + sponsor + amount)
+     1. Data Utilities and Mobile Apps Development – Voola Software Solutions (₹1.6992 lakhs)
+     2. ETL Tools & SQL Automation – Komhar Services, USA ($5,840 USD)
+     3. Technical Training on C & CPP Programming – Nest Digital Private Limited (₹2.06 lakhs)
+
+5. `/research-output` – **Research Output**
+   - **Patent**
+     - “Wireless Vehicle Monitoring System and Method Thereof” (Patent No: 553713, 2024)
+   - **Research Publications**
+     - Show a summary card: 10+ papers in international journals / conferences.
+     - Mention venues: Springer Wireless Personal Communications, Wiley International Journal of Communication Systems, Elsevier Procedia Computer Science, IEEE Conference Proceedings.
+   - Key publication areas:
+     - Vehicle monitoring using AI/ML
+     - SDN controller placement
+     - IoT applications
+     - Wireless sensor networks
+
+6. `/events` – **Major Events Organized**
+   Use a vertical timeline or cards with date + description:
+
+   1) SERB One Week Workshop on SDN (July 17–23, 2023)
+      - Topics: P4 Programming, eBPF, Kubernetes, MININET, ONOS
+      - Resource persons from IIT Hyderabad, IIIT Delhi, IIT Dharwad
+   2) Two Day Workshop on Network Simulator (Feb 22–23, 2024)
+   3) One Week Workshop on IoT for Real-Time Applications (June 16–20, 2025)
+   4) Online Workshop on Proteus VSM for IoT/Robotics (Nov 2022)
+   5) FNA-2023 International Workshop on “Future Networking Architectures”
+
+7. `/gallery` – **Image Gallery**
+   - Responsive grid gallery using sample images under `/public/images/gallery/...`.
+   - Each image card can show event name on hover.
+   - I will later replace placeholders with actual faculty / event photos.
+
+8. `/downloads` – **Downloadable Resources**
+   - Cards or list of items (brochures, schedules, research PDFs) with download buttons.
+   - Use dummy links now; make paths configurable via data.
+
+9. `/publications` – **Publications & Talks**
+   - Section for publications summary (same info from Research Output, can be re-used).
+   - Section for talks (placeholder list for now).
+
+10. `/contact` – **Contact Information**
+    - Show location, phone, email, and map placeholder.
+    - Details:
+      - Location: IIIT Kottayam, Valavoor P.O, Pala, Kottayam, Kerala, India – 686635
+      - Phone: +91-0482-2202171
+      - Email: kguravaiah@iiitkottayam.ac.in
+    - Add a simple contact form (name, email, message) with front-end validation only (no backend needed; just log to console).
+    - Embed a Google Maps iframe placeholder or a styled “View on Google Maps” button.
+
+11. `/about` – **Content Highlights & Conclusion**
+    Combine:
+
+    - Research Impact:
+      - 1 granted patent
+      - 10+ international publications
+      - Multiple funded projects
+      - Industry collaboration
+      - International workshop organization
+
+    - Student Involvement:
+      - Ph.D. research opportunities
+      - B.Tech project work
+      - Internship programs
+      - Hands-on workshop participation
+
+    - Industry Connect:
+      - Consultancy projects with Wipro, Komhar Services
+      - Industry expert involvement
+      - Real-world problem solving focus
+
+    - Target Audience:
+      - Prospective Students
+      - Academic Community
+      - Industry Partners
+      - Funding Agencies
+      - General Public
+
+    - Future Enhancement Opportunities (shown as bullet list):
+      - Dynamic content management system
+      - Database integration for publications/projects
+      - Search functionality
+      - Blog section for research updates
+      - Member login portal
+      - Online application forms
+      - Live event streaming integration
+
+    - Conclusion block (prominent card):
+      - Explain that this is a **well-structured academic research group website** that showcases the SWING group’s expertise in networking, AI/ML, etc.
+      - Mention roles: research dissemination, student recruitment, industry collaboration, event promotion, academic networking.
+      - Mention that modular, component-based React architecture makes it maintainable and scalable.
+
+GLOBAL LAYOUT & COMPONENTS
+
+Create these shared components:
+
+- `components/Layout.tsx`
+  - Includes top navigation bar and footer.
+  - Wrap all pages.
+
+- `components/Navbar.tsx`
+  - Sticky top navbar.
+  - Dual logo (IIIT + SWING) on the left.
+  - Navigation links to all pages (Home, Research Areas, Projects, Events, Research Output, Team, Gallery, Downloads, Publications, About, Contact).
+  - Hamburger menu for mobile with slide-down menu.
+
+- `components/Footer.tsx`
+  - Contact info summary
+  - Quick links
+  - Social media icons (Facebook, Twitter/X, LinkedIn, GitHub – use placeholder URLs).
+
+- `components/SectionHeader.tsx`
+  - Title + subtitle + small icon.
+
+- `components/Card.tsx`
+  - Generic card with title, description, optional icon, and optional badge.
+
+- `components/Timeline.tsx`
+  - For events page.
+
+- `components/GalleryGrid.tsx`
+  - For responsive gallery.
+
+- `components/StatsStrip.tsx`
+  - For showing count of students, projects, patents, etc.
+
+DESIGN & UX DETAILS
+
+- Use Tailwind utilities for spacing, typography, and layout.
+- Use `max-w-6xl mx-auto px-4` or similar to center content.
+- Headings: use Google Fonts style equivalent (Montserrat / Lato via CSS or default Tailwind fonts).
+- Add hover transitions for cards and buttons.
+- Use gradients in hero background and primary buttons.
+- Ensure good contrast and accessibility (ARIA labels, alt text for images, semantic HTML).
+
+DATA ORGANIZATION
+
+Create a `/src/data` folder with structured TypeScript data:
+
+- `researchAreas.ts`
+- `team.ts`
+- `projects.ts`
+- `events.ts`
+- `researchOutput.ts`
+- `highlights.ts`
+- `gallery.ts`
+- `links.ts`
+
+Each file should export typed arrays used by the components. This keeps components clean and reusable.
+
+DELIVERABLE
+
+1. Full React + TypeScript + Tailwind project structure, ready to run with `npm install` and `npm run dev`.
+2. All routes and components implemented as described.
+3. Sample placeholder images and links so I can later replace them with real assets.
+4. Clear comments where I need to plug in my own images (faculty photos, event images, logos, PDFs, etc.).
+
+Please now create all necessary files and code for this project.
