@@ -27,7 +27,7 @@ export const events: Event[] = [
     ],
   },
   {
-    id: "network-simulator",
+    id: "-simulator",
     title: "Two Day Workshop on Network Simulator",
     date: "February 22-23, 2024",
     description: "Hands-on workshop on network simulation tools and techniques for research and education.",
